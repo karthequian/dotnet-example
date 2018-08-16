@@ -135,3 +135,6 @@ NAME              STATUS    AGE       VERSION
  ~/dev/src/github.com/karthequian/dotnet-example$ curl 129.146.162.102:32080/api/values
 ["value1","value2"]
 ```
+
+## Fin!
+And there you have it, a dotnet core app running in Kubernetes! If you run into issues, feel free to create a github issue against me.
