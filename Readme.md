@@ -103,7 +103,7 @@ Next, to verify this works, I can run the container with the command `docker run
 
 ## Run in Kubernetes
 
-I've created a sample Deployment.yaml file with this project that you can use. Once you've got a kubernetes cluster running, such as a cluster in Oracle Kubernetes Engine, you can run the command `kubectl apply -f Deployment.yaml` to deploy the container to Kuberentes. This will make a deployment and a service, and will expose the service as a nodeport on port `32080`.
+I've created a sample Deployment.yaml file with this project that you can use. Once you've got a kubernetes cluster running, such as a cluster in Oracle Kubernetes Engine, you can run the command `kubectl apply -f https://raw.githubusercontent.com/karthequian/dotnet-example/master/Deployment.yaml` to deploy the container to Kuberentes. This will make a deployment and a service, and will expose the service as a nodeport on port `32080`.
 
 ```
  ~/dev/src/github.com/karthequian/dotnet-example$ kubectl apply -f Deployment.yaml
