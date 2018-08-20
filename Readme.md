@@ -1,6 +1,7 @@
 # Running a dotnet app in Kubernetes
 
 ## Run dotnet on your mac
+
 First, you'll need to install dotnet core on your mac. You can easily do this by following the instructions here: https://www.microsoft.com/net/learn/get-started-with-dotnet-tutorial
 
 Next, create a simple new web application. I chose a webapi application, because I wanted to create an example API running in Kubernetes. I passed a flag to not have any auth turned on by default, and no https turned on by defaults: `dotnet new webapi --auth None --no-https`. 
@@ -24,6 +25,7 @@ Restore succeeded.
 This will effectively create the shell for your project (csproj), and everything you'll see in the github project..
 
 ## Run your application locally
+
 Type `dotnet run` to run it locally on your mac. The initial build took a little long, but it was up and running pretty quick. The output of the command is shown below:
 
 ```
@@ -45,6 +47,7 @@ To test the application, you can run a simple curl against it, or open up the UR
 ```
 
 ## Dockerize the application
+
 I've included a sample Dockerfile with this, that'll work well for the application. I followed the example to build this from the Docker website: https://docs.docker.com/engine/examples/dotnetcore/#create-a-dockerfile-for-an-aspnet-core-application. I did make a change to the `Entrypoint`, and updated the dll name to match the project name, which, in this case is `dotnet-example.dll`
 
 To build, I ran the following docker build command, and tagged it with my dockerhub name.
@@ -137,4 +140,5 @@ NAME              STATUS    AGE       VERSION
 ```
 
 ## Fin!
+
 And there you have it, a dotnet core app running in Kubernetes! If you run into issues, feel free to create a github issue against me.
